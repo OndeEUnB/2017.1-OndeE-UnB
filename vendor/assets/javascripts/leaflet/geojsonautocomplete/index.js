@@ -16,7 +16,7 @@
         notFoundHint: "Veja se sua busca está correta e tente novamente",
         drawColor: "green",
         pointGeometryZoomLevel: -1, //Set zoom level for point geometries -1 means use leaflet default.
-        pagingActive: true
+        pagingActive: false
     };
 
     var activeResult = -1;
