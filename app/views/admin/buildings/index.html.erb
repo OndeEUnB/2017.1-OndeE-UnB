@@ -1,47 +1,67 @@
-<div class="row" style="margin-top: 30px;">
-    <div class="col-xs-12">
-      <%= notice.html_safe unless notice.blank? %>
-        <div class="card card-mini">
-            <div class="card-header">
-                <div class="card-title">Edifícios</div>
-                <ul class="card-action">
-                    <li>
-                        <%= link_to '<i class="fa fa-plus"></i>'.html_safe, new_admin_building_path %>
-                    </li>
-                </ul>
-            </div>
-            <div class="card-body no-padding table-responsive">
-                <table class="table card-table">
-                    <thead>
-                        <tr>
-                            <th>Sigla</th>
-                            <th>Título</th>
-                            <th>Telefone</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <% @buildings.each do |building| %>
-                        <tr>
-                            <td><%= building.acronym %></td>
-                            <td><%= building.title %></td>
-                            <td><%= building.phone %></td>
-                            <td>
-                                <%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_admin_building_path(building) %>
-                                <%= link_to '<i class="fa fa-remove"></i>'.html_safe, admin_building_path(building), method: :delete, data: {
-                                  'sweet-alert-confirm': 'Alerta',
-                                  'confirm-button-text': 'Sim',
-                                  'confirm-button-color': '#DD6B55',
-                                  'cancel-button-text': 'Cancelar',
-                                  'text': 'Tem certeza que deseja apagar este prédio?'
-                                } %>
-                            </td>
-                        </tr>
-                        <% end %>
-                    </tbody>
-                </table>
-                <%= paginate @buildings, window: 3 %>
-            </div>
-        </div>
+<div class="content-wrapper">
+  <div class="content-header row">
+    <div class="content-header-left col-md-6 col-xs-12 mb-1">
+      <h2 class="content-header-title">Edifícios</h2>
     </div>
+  </div>
+  <div class="content-body">
+
+    <%= notice.html_safe unless notice.blank? %>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="card">
+          <div class="card-header">
+            <h4 class="card-title">Lista de Edifícios</h4>
+            <a class="heading-elements-toggle">
+              <i class="icon-ellipsis font-medium-3"></i>
+            </a>
+            <div class="heading-elements">
+              <ul class="list-inline">
+                <li>
+                  <a href="<%= new_admin_building_path %>">
+                    <i class="icon-plus2"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-body collapse in">
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead class="thead-inverse">
+                  <tr>
+                    <th>Sigla</th>
+                    <th>Título</th>
+                    <th>Telefone</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% @buildings.find_each do |building| %>
+                    <tr>
+                      <td><%= building.acronym %></td>
+                      <td><%= building.title %></td>
+                      <td><%= building.phone %></td>
+                      <td>
+                        <a href="<%= edit_admin_building_path(building) %>">
+                          <span class="icon-pencil2"></span>
+                        </a>
+                        <%= link_to '<span class="icon-bin"></span>'.html_safe, admin_building_path(building), method: :delete, data: { 'sweet-alert-confirm': 'Alerta', 'confirm-button-text': 'Sim', 'confirm-button-color': '#DD6B55', 'cancel-button-text': 'Cancelar', 'text':
+                        'Tem certeza que deseja apagar este prédio?' } %>
+                      </td>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+
+              <%= paginate @buildings, window: 3 %>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
