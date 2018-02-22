@@ -89,208 +89,34 @@
       <div class="main-menu-content">
         <ul id="main-menu-navigation" data-menu="menu-navigation" class="navigation navigation-main">
           <li class=" nav-item">
-            <a href="index.html">
+            <a href="<%= admin_path %>">
               <i class="icon-home3"></i>
               <span data-i18n="nav.dash.main" class="menu-title">Dashboard</span>
-              <span class="tag tag tag-primary tag-pill float-xs-right mr-2">2</span>
             </a>
-            <ul class="menu-content">
-              <li class="active">
-                <a href="index.html" data-i18n="nav.dash.main" class="menu-item">Dashboard</a>
-              </li>
-              <li>
-                <a href="dashboard-2.html" data-i18n="nav.dash.main" class="menu-item">Dashboard 2</a>
-              </li>
-            </ul>
           </li>
           <li class=" nav-item">
-            <a href="#">
-              <i class="icon-stack-2"></i>
-              <span data-i18n="nav.page_layouts.main" class="menu-title">Page layouts</span></a>
-            <ul class="menu-content">
-              <li>
-                <a href="layout-1-column.html" data-i18n="nav.page_layouts.1_column" class="menu-item">1 column</a>
-              </li>
-              <li>
-                <a href="layout-2-columns.html" data-i18n="nav.page_layouts.2_columns" class="menu-item">2 columns</a>
-              </li>
-              <li>
-                <a href="layout-boxed.html" data-i18n="nav.page_layouts.boxed_layout" class="menu-item">Boxed layout</a>
-              </li>
-              <li>
-                <a href="layout-static.html" data-i18n="nav.page_layouts.static_layout" class="menu-item">Static layout</a>
-              </li>
-              <li class="navigation-divider"></li>
-              <li>
-                <a href="layout-light.html" data-i18n="nav.page_layouts.light_layout" class="menu-item">Light layout</a>
-              </li>
-              <li>
-                <a href="layout-dark.html" data-i18n="nav.page_layouts.dark_layout" class="menu-item">Dark layout</a>
-              </li>
-              <li>
-                <a href="layout-semi-dark.html" data-i18n="nav.page_layouts.semi_dark_layout" class="menu-item">Semi dark layout</a>
-              </li>
-            </ul>
+            <a href="<%= admin_buildings_path %>">
+              <i class="icon-office"></i>
+              <span data-i18n="nav.page_layouts.main" class="menu-title">Edifícios</span>
+            </a>
           </li>
           <li class=" nav-item">
-            <a href="#">
-              <i class="icon-briefcase4"></i>
-              <span data-i18n="nav.project.main" class="menu-title">Pages</span></a>
-            <ul class="menu-content">
-              <li>
-                <a href="invoice-template.html" data-i18n="nav.invoice.invoice_template" class="menu-item">Invoice Template</a>
-              </li>
-              <li>
-                <a href="gallery-grid.html" data-i18n="nav.gallery_pages.gallery_grid" class="menu-item">Gallery Grid</a>
-              </li>
-              <li>
-                <a href="search-page.html" data-i18n="nav.search_pages.search_page" class="menu-item">Search Page</a>
-              </li>
-              <li>
-                <a href="search-website.html" data-i18n="nav.search_pages.search_website" class="menu-item">Search Website</a>
-              </li>
-              <li>
-                <a href="login-simple.html" data-i18n="nav.login_register_pages.login_simple" class="menu-item">Login Simple</a>
-              </li>
-              <li>
-                <a href="register-simple.html" data-i18n="nav.login_register_pages.register_simple" class="menu-item">Register Simple</a>
-              </li>
-              <li>
-                <a href="unlock-user.html" data-i18n="nav.login_register_pages.unlock_user" class="menu-item">Unlock User</a>
-              </li>
-              <li>
-                <a href="recover-password.html" data-i18n="nav.login_register_pages.recover_password" class="menu-item">Recover Password</a>
-              </li>
-              <li>
-                <a href="#" data-i18n="nav.error_pages.main" class="menu-item">Error</a>
-                <ul class="menu-content">
-                  <li>
-                    <a href="error-400.html" data-i18n="nav.error_pages.error_400" class="menu-item">Error 400</a>
-                  </li>
-                  <li>
-                    <a href="error-401.html" data-i18n="nav.error_pages.error_401" class="menu-item">Error 401</a>
-                  </li>
-                  <li>
-                    <a href="error-403.html" data-i18n="nav.error_pages.error_403" class="menu-item">Error 403</a>
-                  </li>
-                  <li>
-                    <a href="error-404.html" data-i18n="nav.error_pages.error_404" class="menu-item">Error 404</a>
-                  </li>
-                  <li>
-                    <a href="error-500.html" data-i18n="nav.error_pages.error_500" class="menu-item">Error 500</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="coming-soon-flat.html" data-i18n="nav.other_pages.coming_soon.coming_soon_flat" class="menu-item">Coming Soon</a>
-              </li>
-              <li>
-                <a href="under-maintenance.html" data-i18n="nav.other_pages.under_maintenance" class="menu-item">Maintenance</a>
-              </li>
-            </ul>
+            <a href="<%= admin_rooms_path %>">
+              <i class="icon-enter"></i>
+              <span data-i18n="nav.page_layouts.main" class="menu-title">Salas</span>
+            </a>
           </li>
           <li class=" nav-item">
-            <a href="#">
-              <i class="icon-ios-albums-outline"></i>
-              <span data-i18n="nav.cards.main" class="menu-title">Cards</span></a>
-            <ul class="menu-content">
-              <li>
-                <a href="card-bootstrap.html" data-i18n="nav.cards.card_bootstrap" class="menu-item">Bootstrap Cards</a>
-              </li>
-              <li>
-                <a href="card-actions.html" data-i18n="nav.cards.card_actions" class="menu-item">Card Action</a>
-              </li>
-            </ul>
+            <a href="<%= admin_points_path %>">
+              <i class="icon-location22"></i>
+              <span data-i18n="nav.page_layouts.main" class="menu-title">Pontos</span>
+            </a>
           </li>
           <li class=" nav-item">
-            <a href="#">
-              <i class="icon-whatshot"></i>
-              <span data-i18n="nav.advance_cards.main" class="menu-title">Advance Cards</span></a>
-            <ul class="menu-content">
-              <li>
-                <a href="card-statistics.html" data-i18n="nav.cards.card_statistics" class="menu-item">Statistics</a>
-              </li>
-              <li>
-                <a href="card-charts.html" data-i18n="nav.cards.card_charts" class="menu-item">Charts</a>
-              </li>
-            </ul>
-          </li>
-          <li class=" nav-item">
-            <a href="#">
-              <i class="icon-compass3"></i>
-              <span data-i18n="nav.content.main" class="menu-title">Content</span></a>
-            <ul class="menu-content">
-              <li>
-                <a href="content-grid.html" data-i18n="nav.content.content_grid" class="menu-item">Grid</a>
-              </li>
-              <li>
-                <a href="content-typography.html" data-i18n="nav.content.content_typography" class="menu-item">Typography</a>
-              </li>
-              <li>
-                <a href="content-text-utilities.html" data-i18n="nav.content.content_text_utilities" class="menu-item">Text utilities</a>
-              </li>
-              <li>
-                <a href="content-helper-classes.html" data-i18n="nav.content.content_helper_classes" class="menu-item">Helper classes</a>
-              </li>
-            </ul>
-          </li>
-          <li class=" nav-item">
-            <a href="#">
-              <i class="icon-grid2"></i>
-              <span data-i18n="nav.components.main" class="menu-title">Components</span></a>
-            <ul class="menu-content">
-              <li>
-                <a href="component-alerts.html" data-i18n="nav.components.component_alerts" class="menu-item">Alerts</a>
-              </li>
-              <li>
-                <a href="component-buttons-basic.html" data-i18n="nav.components.components_buttons.component_buttons_basic" class="menu-item">Basic Buttons</a>
-              </li>
-              <li>
-                <a href="component-carousel.html" data-i18n="nav.components.component_carousel" class="menu-item">Carousel</a>
-              </li>
-              <li>
-                <a href="component-collapse.html" data-i18n="nav.components.component_collapse" class="menu-item">Collapse</a>
-              </li>
-              <li>
-                <a href="component-dropdowns.html" data-i18n="nav.components.component_dropdowns" class="menu-item">Dropdowns</a>
-              </li>
-              <li>
-                <a href="component-list-group.html" data-i18n="nav.components.component_list_group" class="menu-item">List Group</a>
-              </li>
-              <li>
-                <a href="component-modals.html" data-i18n="nav.components.component_modals" class="menu-item">Modals</a>
-              </li>
-              <li>
-                <a href="component-pagination.html" data-i18n="nav.components.component_pagination" class="menu-item">Pagination</a>
-              </li>
-              <li>
-                <a href="component-navs-component.html" data-i18n="nav.components.component_navs_component" class="menu-item">Navs Component</a>
-              </li>
-              <li>
-                <a href="component-tabs-component.html" data-i18n="nav.components.component_tabs_component" class="menu-item">Tabs Component</a>
-              </li>
-              <li>
-                <a href="component-pills-component.html" data-i18n="nav.components.component_pills_component" class="menu-item">Pills Component</a>
-              </li>
-              <li>
-                <a href="component-tooltips.html" data-i18n="nav.components.component_tooltips" class="menu-item">Tooltips</a>
-              </li>
-              <li>
-                <a href="component-popovers.html" data-i18n="nav.components.component_popovers" class="menu-item">Popovers</a>
-              </li>
-              <li>
-                <a href="component-tags.html" data-i18n="nav.components.component_tags" class="menu-item">Tags</a>
-              </li>
-              <li>
-                <a href="component-pill-tags.html" class="menu-item">Pill Tags</a>
-              </li>
-              <li>
-                <a href="component-progress.html" data-i18n="nav.components.component_progress" class="menu-item">Progress</a>
-              </li>
-              <li>
-                <a href="component-media-objects.html" data-i18n="nav.components.component_media_objects" class="menu-item">Media Objects</a>
-              </li>
-            </ul>
+            <a href="<%= admin_plans_path %>">
+              <i class="icon-map4"></i>
+              <span data-i18n="nav.page_layouts.main" class="menu-title">Plantas</span>
+            </a>
           </li>
         </ul>
       </div>
