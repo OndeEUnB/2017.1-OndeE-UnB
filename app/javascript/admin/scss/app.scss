@@ -22,8 +22,8 @@
 @import "core/mixins/transitions";
 
 // Overrides user variable
-@import "../../assets/scss/variables/variables";
-@import "../../assets/scss/variables/app-variables";
+@import "variables/variables";
+@import "variables/app-variables";
 
 // Perfect Scrollbar
 
@@ -36,6 +36,10 @@
 @import "core/layouts/footer";
 // menu
 @import "core/menu/navigation";
+@import "core/menu/menu-types/vertical-menu";
+
+// colors
+@import "core/colors/palette-gradient";
 
 // Components
 // ------------------------------

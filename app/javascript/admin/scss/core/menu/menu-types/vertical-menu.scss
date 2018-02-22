@@ -16,12 +16,8 @@
 @import "../../../bootstrap-extended/mixins";
 
 // Core variables and mixins overrides
-@import "../../variables/variables";
-@import "../../variables/app-variables";
-
-// Overrides user variable
-@import "../../../../../assets/scss/variables/variables";
-@import "../../../../../assets/scss/variables/app-variables";
+@import "../../../variables/variables";
+@import "../../../variables/app-variables";
 
 // Import first main menu mixin
 @import "../../mixins/main-menu-mixin";
@@ -70,8 +66,8 @@ body.vertical-layout{
                             > i {
                                 margin-right: 12px;
                                 float:left;
-                                &:before {                                    
-                                    font-size: 1.2rem;                                    
+                                &:before {
+                                    font-size: 1.2rem;
                                 }
                             }
                             >span{
@@ -154,7 +150,7 @@ body.vertical-layout{
                             display: block;
                             padding: 12px 0px;
                             text-align: center;
-                            font-size: 1.6rem;                            
+                            font-size: 1.6rem;
                         }
                         span {
                             display: none;
@@ -187,7 +183,7 @@ body.vertical-layout{
                                 opacity: 1;
                             }
                         }
-                        //hide inner span and ul for the collapsed menu 
+                        //hide inner span and ul for the collapsed menu
                         // &.hover{
                         & > ul {
                             display: none;
@@ -256,7 +252,7 @@ body.vertical-layout{
             .navigation{
                 > li > a{
                     padding: 12px 22px !important;
-                }  
+                }
                 > li.navigation-header .icon-ellipsis {
                     padding: 12px 0px;
                 }

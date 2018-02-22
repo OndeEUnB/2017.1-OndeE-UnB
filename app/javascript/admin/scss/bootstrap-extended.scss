@@ -19,8 +19,8 @@
 @import "core/variables/app-variables";
 
 // Overrides user variable
-@import "../../assets/scss/variables/variables";
-@import "../../assets/scss/variables/app-variables";
+@import "variables/variables";
+@import "variables/app-variables";
 
 // // Core CSS
 @import "bootstrap-extended/reboot";
