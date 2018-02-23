@@ -3,7 +3,19 @@ class Map::SearchController < MapController
     puts params[:search]
     buildings = search_buildings(params[:search])
     rooms = search_rooms(params[:search])
-    buildings + rooms
+    complete_search = buildings + rooms
+    final_search = Array.new
+
+    for i in 0..8
+      final_search.push(complete_search[i])
+    end
+
+    if complete_search.size < 10
+      return complete_search
+    else
+      return final_search
+    end
+
   end
 
   def search
