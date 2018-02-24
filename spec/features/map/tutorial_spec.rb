@@ -23,7 +23,7 @@ describe "Tutorial", type: :feature do
     expect(control).to be(1)
   end
  it "Should show the text of step 1", js:true do
- 	expect(page).to have_content("WELCOME!");
+ 	expect(page).to have_content("BEM-VINDO(A)");
  end
  it "Should go to step 2", js:true do
 	 page.find('.introjs-nextbutton').click
