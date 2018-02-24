@@ -44,19 +44,14 @@
                       <td><%= building.title %></td>
                       <td><%= building.phone %></td>
                       <td>
-                        <a href="<%= edit_admin_building_path(building) %>">
-                          <span class="icon-pencil2"></span>
-                        </a>
-                        <%= link_to '<span class="icon-bin"></span>'.html_safe, admin_building_path(building), method: :delete, data: { 'sweet-alert-confirm': 'Alerta', 'confirm-button-text': 'Sim', 'confirm-button-color': '#DD6B55', 'cancel-button-text': 'Cancelar', 'text':
-                        'Tem certeza que deseja apagar este prédio?' } %>
+                        <%= edit_link edit_admin_building_path(building) %>
+                        <%= destroy_link admin_building_path(building), 'Você tem certeza que deseja apagar este edifícios?' %>
                       </td>
                     </tr>
                   <% end %>
                 </tbody>
               </table>
-
-              <%= paginate @buildings, window: 3 %>
-
+              <%= paginate @buildings, window: @pagination_windows %>
             </div>
           </div>
         </div>

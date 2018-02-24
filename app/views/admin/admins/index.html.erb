@@ -1,45 +1,60 @@
-<div class="row" style="margin-top: 30px;">
-    <div class="col-xs-12">
-      <%= notice.html_safe unless notice.blank? %>
-        <div class="card card-mini">
-            <div class="card-header">
-                <div class="card-title">Administradores</div>
-                <ul class="card-action">
-                    <li>
-                        <!-- colocar link de new admin -->
-                        <%= link_to '<i class="fa fa-plus"></i>'.html_safe, new_admin_admin_path %>
-                    </li>
-                </ul>
-            </div>
-            <div class="card-body no-padding table-responsive">
-                <table class="table card-table">
-                    <thead>
-                        <tr>
-                            <th>Email</th>
-                            <th>Nome</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <% @admins.each do |admin| %>
-                        <tr>
-                            <td><%= admin.email %></td>
-                            <td><%= admin.name %></td>
-                            <td>
-                                <%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_admin_admin_path(admin) %>
-                                <%= link_to '<i class="fa fa-remove"></i>'.html_safe, admin_admin_path(admin), method: :delete, data: {
-                                  'sweet-alert-confirm': 'Alerta',
-                                  'confirm-button-text': 'Sim',
-                                  'cancel-button-text': 'Cancelar',
-                                  'text': 'Tem certeza que deseja apagar este administrador?'
-                                } %>
-                            </td>
-                        </tr>
-                        <% end %>
-                    </tbody>
-                </table>
-                <%= paginate @admins, window: 3 %>
-            </div>
-        </div>
+<div class="content-wrapper">
+  <div class="content-header row">
+    <div class="content-header-left col-md-6 col-xs-12 mb-1">
+      <h2 class="content-header-title">Admins</h2>
     </div>
+  </div>
+  <div class="content-body">
+
+    <%= notice.html_safe unless notice.blank? %>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="card">
+          <div class="card-header">
+            <h4 class="card-title">Lista de Admins</h4>
+            <a class="heading-elements-toggle">
+              <i class="icon-ellipsis font-medium-3"></i>
+            </a>
+            <div class="heading-elements">
+              <ul class="list-inline">
+                <li>
+                  <a href="<%= new_admin_admin_path %>">
+                    <i class="icon-plus2"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-body collapse in">
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead class="thead-inverse">
+                  <tr>
+                    <th>Email</th>
+                    <th>Nome</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% @admins.find_each do |admin| %>
+                    <tr>
+                      <td><%= admin.email %></td>
+                      <td><%= admin.name %></td>
+                      <td>
+                        <%= edit_link edit_admin_admin_path(admin) %>
+                        <%= destroy_link admin_admin_path(admin), 'Você tem certeza que deseja apagar este administrador?' %>
+                      </td>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+              <%= paginate @admins, window: @pagination_windows %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>

@@ -3,7 +3,12 @@ class Admin::PlansController < AdminController
   before_action :set_buildings, only: [:new, :edit, :update, :create]
 
   def index
-    @plans = Plan.order("building_id").page(params['page']).per(13)
+    page_limit = 13
+    @plans = Plan.order("building_id").
+      includes(:building).
+      page(params['page']).
+      per(page_limit)
+    @pagination_windows = 3
   end
 
   def new

@@ -2,7 +2,9 @@ class Admin::AdminsController < AdminController
   before_action :set_admin, only: [:destroy, :edit, :update]
 
   def index
-    @admins = Admin.order("name").page(params['page']).per(13)
+    page_limit = 13
+    @admins = Admin.order("name").page(params['page']).per(page_limit)
+    @pagination_windows = 3
   end
 
   def new
