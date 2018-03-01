@@ -1,7 +1,12 @@
 class AdminController < ApplicationController
   before_action :authenticate_admin!
   layout 'admin'
+
   def index
+    @buildings = Building.count
+    @rooms = Room.count
+    @points = Point.count
+    @plans = Plan.count
   end
 
   private
