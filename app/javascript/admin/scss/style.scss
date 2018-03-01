@@ -7,3 +7,33 @@ $border-color: #f2f2f2e3;
 .form-control {
   border-color: $border-color;
 }
+
+.brand-logo {
+  filter: brightness(0) invert(1);
+  width: 100%;
+}
+
+// Font Weight
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+// Font Size
+.fs-14 {
+  font-size: 14px;
+}
+
+// Margin
+
+.ml-5 {
+  margin-left: 5px
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
