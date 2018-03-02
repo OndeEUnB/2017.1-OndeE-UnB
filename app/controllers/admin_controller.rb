@@ -7,6 +7,7 @@ class AdminController < ApplicationController
     @rooms = Room.count
     @points = Point.count
     @plans = Plan.count
+    @title = "Dashboard"
   end
 
   private

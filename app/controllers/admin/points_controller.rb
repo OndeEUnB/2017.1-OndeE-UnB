@@ -5,13 +5,16 @@ class Admin::PointsController < AdminController
     page_limit = 13
     @points = Point.order("type_point").page(params['page']).per(page_limit)
     @pagination_windows = 3
+    @title = 'Pontos'
   end
 
   def new
     @point = Point.new
+    @title = 'Cadastrar Ponto'
   end
 
   def edit
+    @title = 'Alterar Ponto'
   end
 
   def update

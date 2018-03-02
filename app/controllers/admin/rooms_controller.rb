@@ -6,13 +6,16 @@ class Admin::RoomsController < AdminController
     page_limit = 13
     @rooms = Room.order("building_id").page(params['page']).per(page_limit)
     @pagination_windows = 3
+    @title = 'Salas'
   end
 
   def new
     @room = Room.new
+    @title = 'Cadastrar Sala'
   end
 
   def edit
+    @title = 'Alterar Sala'
   end
 
   def update

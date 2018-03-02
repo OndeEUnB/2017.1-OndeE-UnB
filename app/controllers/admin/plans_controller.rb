@@ -9,13 +9,16 @@ class Admin::PlansController < AdminController
       page(params['page']).
       per(page_limit)
     @pagination_windows = 3
+    @title = 'Plantas'
   end
 
   def new
     @plan = Plan.new
+    @title = 'Cadastrar Planta'
   end
 
   def edit
+    @title = 'Alterar Planta'
   end
 
   def update
