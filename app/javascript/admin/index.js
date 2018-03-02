@@ -1,2 +1,2 @@
-import './js/core/app-menu';
-import './js/core/app';
+import 'bootstrap';
+import './js';

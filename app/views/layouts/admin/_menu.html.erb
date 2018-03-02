@@ -1,34 +1,51 @@
-<div data-scroll-to-active="true" class="main-menu menu-fixed menu-dark menu-accordion menu-shadow">
-  <div class="main-menu-content">
-    <ul id="main-menu-navigation" data-menu="menu-navigation" class="navigation navigation-main">
-      <li class=" nav-item">
-        <a href="<%= admin_path %>">
-          <i class="icon-home3"></i>
-          <span data-i18n="nav.dash.main" class="menu-title">Dashboard</span>
+<div class="sidebar" data-color="blue" data-image="../assets/img/sidebar-5.jpg">
+  <div class="sidebar-wrapper">
+    <div class="logo">
+      <a href="<%= admin_path %>" class="simple-text">
+        Campus Map
+      </a>
+    </div>
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="<%= admin_path %>">
+          <i class="nc-icon nc-chart-pie-35"></i>
+          <p>Dashboard</p>
         </a>
       </li>
-      <li class=" nav-item">
-        <a href="<%= admin_buildings_path %>">
-          <i class="icon-office"></i>
-          <span data-i18n="nav.page_layouts.main" class="menu-title">Edifícios</span>
+      <li>
+        <a class="nav-link" href="<%= admin_buildings_path %>">
+          <i class="nc-icon nc-bank"></i>
+          <p>Edifícios</p>
         </a>
       </li>
-      <li class=" nav-item">
-        <a href="<%= admin_rooms_path %>">
-          <i class="icon-enter"></i>
-          <span data-i18n="nav.page_layouts.main" class="menu-title">Salas</span>
+      <li>
+        <a class="nav-link" href="<%= admin_rooms_path %>">
+          <i class="nc-icon nc-grid-45"></i>
+          <p>Salas</p>
         </a>
       </li>
-      <li class=" nav-item">
-        <a href="<%= admin_points_path %>">
-          <i class="icon-location22"></i>
-          <span data-i18n="nav.page_layouts.main" class="menu-title">Pontos</span>
+      <li>
+        <a class="nav-link" href="<%= admin_points_path %>">
+          <i class="nc-icon nc-pin-3"></i>
+          <p>Pontos</p>
         </a>
       </li>
-      <li class=" nav-item">
-        <a href="<%= admin_plans_path %>">
-          <i class="icon-map4"></i>
-          <span data-i18n="nav.page_layouts.main" class="menu-title">Plantas</span>
+      <li>
+        <a class="nav-link" href="<%= admin_plans_path %>">
+          <i class="nc-icon nc-map-big"></i>
+          <p>Plantas</p>
+        </a>
+      </li>
+      <li>
+        <a class="nav-link" href="<%= admin_admins_path %>">
+          <i class="nc-icon nc-single-02"></i>
+          <p>Admininstradores</p>
+        </a>
+      </li>
+      <li class="nav-item active active-pro">
+        <a class="nav-link active" href="<%= root_path %>">
+          <i class="nc-icon nc-layers-3"></i>
+          <p>Abrir Mapa</p>
         </a>
       </li>
     </ul>

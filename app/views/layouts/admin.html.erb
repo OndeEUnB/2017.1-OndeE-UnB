@@ -1,32 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" data-textdirection="ltr" class="loading">
+<html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <title>Admin</title>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-touch-fullscreen" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport'/>
+    <!-- Fonts and icons -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"/>
     <%= stylesheet_link_tag 'https://unpkg.com/leaflet@1.0.3/dist/leaflet.css' %>
-    <%= stylesheet_pack_tag "admin" %>
+    <!-- CSS Files -->
+    <%= stylesheet_pack_tag 'admin' %>
   </head>
-  <body data-open="click" data-menu="vertical-menu" data-col="2-columns" class="vertical-layout vertical-menu 2-columns fixed-navbar menu-collapsed">
 
-    <!-- navbar-fixed-top-->
-    <%= render 'layouts/admin/nav' %>
-
-    <!-- main menu-->
-    <%= render 'layouts/admin/menu' %>
-    <!-- / main menu-->
-
-    <div class="app-content content container-fluid">
-      <%= yield %>
+  <body>
+    <div class="wrapper">
+      <%= render 'layouts/admin/menu' %>
+      <div class="main-panel">
+        <!-- Navbar -->
+        <%= render 'layouts/admin/nav' %>
+        <!-- End Navbar -->
+        <div class="content">
+          <%= yield %>
+        </div>
+      </div>
     </div>
-
-    <%= javascript_include_tag 'https://unpkg.com/leaflet@1.0.3/dist/leaflet.js' %>
-    <%= javascript_include_tag 'admin' %>
-    <%= javascript_pack_tag 'admin' %>
   </body>
+  <!-- Core JS Files -->
+  <%= javascript_include_tag 'https://unpkg.com/leaflet@1.0.3/dist/leaflet.js' %>
+  <%#= javascript_include_tag 'admin' %>
+  <%= javascript_pack_tag 'admin' %>
 </html>
