@@ -1,62 +1,36 @@
-<div class="content-wrapper">
-  <div class="content-header row">
-    <div class="content-header-left col-md-6 col-xs-12 mb-1">
-      <h2 class="content-header-title">Pontos</h2>
-    </div>
-  </div>
-  <div class="content-body">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+        <%= notice.html_safe unless notice.blank? %>
 
-    <%= notice.html_safe unless notice.blank? %>
-
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="card">
-          <div class="card-header">
-            <h4 class="card-title">Lista de Pontos</h4>
-            <a class="heading-elements-toggle">
-              <i class="icon-ellipsis font-medium-3"></i>
-            </a>
-            <div class="heading-elements">
-              <ul class="list-inline">
-                <li>
-                  <a href="<%= new_admin_point_path %>">
-                    <i class="icon-plus2"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="card-body collapse in">
-            <div class="table-responsive">
-              <table class="table table-striped">
-                <thead class="thead-inverse">
-                  <tr>
-                    <th>Título</th>
-                    <th>Tipo</th>
-                    <th>Descrição</th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <% @points.find_each do |point| %>
-                    <tr>
-                      <td><%= point.title %></td>
-                      <td><%= point.type_point %></td>
-                      <td><%= point.description %></td>
-                      <td>
-                        <%= edit_link edit_admin_point_path(point) %>
-                        <%= destroy_link admin_point_path(point), 'Você tem certeza que deseja apagar este ponto?' %>
-                      </td>
-                    </tr>
-                  <% end %>
-                </tbody>
-              </table>
-              <%= paginate @points, window: @pagination_windows %>
-            </div>
-          </div>
+      <div class="card">
+        <div class="card-body table-responsive p-0">
+          <table class="table table-hover table-striped m-0">
+            <thead>
+              <tr>
+                <th>Título</th>
+                <th>Tipo</th>
+                <th>Descrição</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @points.find_each do |point| %>
+                <tr>
+                  <td><%= point.title %></td>
+                  <td><%= point.type_point %></td>
+                  <td><%= point.description %></td>
+                  <td>
+                    <%= edit_link edit_admin_point_path(point) %>
+                    <%= destroy_link admin_point_path(point), 'Você tem certeza que deseja apagar este ponto?' %>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
         </div>
       </div>
+      <%= paginate @points, window: @pagination_windows %>
     </div>
   </div>
-
 </div>
