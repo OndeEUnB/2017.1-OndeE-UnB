@@ -1,62 +1,36 @@
-<div class="content-wrapper">
-  <div class="content-header row">
-    <div class="content-header-left col-md-6 col-xs-12 mb-1">
-      <h2 class="content-header-title">Edifícios</h2>
-    </div>
-  </div>
-  <div class="content-body">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+        <%= notice.html_safe unless notice.blank? %>
 
-    <%= notice.html_safe unless notice.blank? %>
-
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="card">
-          <div class="card-header">
-            <h4 class="card-title">Lista de Edifícios</h4>
-            <a class="heading-elements-toggle">
-              <i class="icon-ellipsis font-medium-3"></i>
-            </a>
-            <div class="heading-elements">
-              <ul class="list-inline">
-                <li>
-                  <a href="<%= new_admin_building_path %>">
-                    <i class="icon-plus2"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="card-body collapse in">
-            <div class="table-responsive">
-              <table class="table table-striped">
-                <thead class="thead-inverse">
-                  <tr>
-                    <th>Sigla</th>
-                    <th>Título</th>
-                    <th>Telefone</th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <% @buildings.find_each do |building| %>
-                    <tr>
-                      <td><%= building.acronym %></td>
-                      <td><%= building.title %></td>
-                      <td><%= building.phone %></td>
-                      <td>
-                        <%= edit_link edit_admin_building_path(building) %>
-                        <%= destroy_link admin_building_path(building), 'Você tem certeza que deseja apagar este edifícios?' %>
-                      </td>
-                    </tr>
-                  <% end %>
-                </tbody>
-              </table>
-              <%= paginate @buildings, window: @pagination_windows %>
-            </div>
-          </div>
+      <div class="card">
+        <div class="card-body table-responsive p-0">
+          <table class="table table-hover table-striped m-0">
+            <thead>
+              <tr>
+                <th>Sigla</th>
+                <th>Título</th>
+                <th class="hidden-sm-down">Telefone</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @buildings.find_each do |building| %>
+                <tr>
+                  <td><%= building.acronym %></td>
+                  <td><%= building.title %></td>
+                  <td class="hidden-sm-down"><%= building.phone %></td>
+                  <td>
+                    <%= edit_link edit_admin_building_path(building) %>
+                    <%= destroy_link admin_building_path(building), 'Você tem certeza que deseja apagar este edifício?' %>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
         </div>
       </div>
+      <%= paginate @buildings, window: @pagination_windows %>
     </div>
   </div>
-
 </div>

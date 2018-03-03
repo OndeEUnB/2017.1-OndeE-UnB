@@ -8,12 +8,12 @@ module AdminHelper
   end
 
   def edit_link(path)
-    link_text = '<span class="icon-pencil2"></span>'.html_safe
-    link_to link_text, path
+    link_text = '&#9998;'.html_safe
+    link_to link_text, path, class: 'btn btn-info btn-fill btn-xs text-white'
   end
 
   def destroy_link(path, confirm_text)
-    link_text = '<span class="icon-bin"></span>'.html_safe
+    link_text = '&#10005;'.html_safe
     sweet_alert = {
       confirm: 'Are you ready?',
       'sweet-alert-confirm': 'Alerta',
@@ -22,7 +22,8 @@ module AdminHelper
       'cancel-button-text': 'Cancelar',
       'text': confirm_text
     }
-    link_to link_text, path, method: :delete, data: sweet_alert
+    link_to link_text, path, method: :delete,
+      class: 'btn btn-danger btn-fill btn-xs text-white ml-1', data: sweet_alert
   end
 
   def options_for_levels_with_plans(plans, building, selected_level)
