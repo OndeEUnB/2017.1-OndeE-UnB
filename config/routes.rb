@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_scope :admin do
     get 'admin/login', to: 'devise/sessions#new', as: 'new_login'
     post 'admin/login', to: 'devise/sessions#create', as: 'login'
-    get 'admin/logout', to: 'devise/sessions#destroy', as: 'logout'
+    delete 'admin/logout', to: 'devise/sessions#destroy', as: 'logout'
     get 'admin/edit', to: 'devise/registrations#edit', as: 'edit_admin_registration'
     put 'admin/edit', to: 'registrations#update', as: 'admin_registration'
     # get 'admin/registration', to: 'devise/registrations#new', as: 'new_registration'
@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   root 'map#index'
 
   get 'about', to: 'about#index'
-  
+
   get 'findme', to: 'map#index'
 
   get 'admin', to: 'admin#index'

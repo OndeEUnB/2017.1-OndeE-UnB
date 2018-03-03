@@ -5,7 +5,7 @@ pt-BR:
         updated: "Cadastrado editado com sucesso."
     sessions:
       admin:
-        signed_in: "Seja bem-vindo!"
+        signed_in: ""
   activerecord:
     errors:
       messages:

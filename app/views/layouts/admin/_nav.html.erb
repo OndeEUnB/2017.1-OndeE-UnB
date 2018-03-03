@@ -17,9 +17,9 @@
             <span class="no-icon"><%= current_admin.name %></span>
           </a>
           <div class="dropdown-menu dropdown-menu-right">
-            <a class="dropdown-item" href="#">Configurações</a>
+            <a class="dropdown-item" href="<%= edit_admin_registration_path %>">Configurações</a>
             <div class="divider"></div>
-            <a class="dropdown-item" href="#">Sair</a>
+            <%= link_to 'Sair', logout_path, data: { method: :delete }, class: 'dropdown-item' %>
           </div>
         </li>
       </ul>
