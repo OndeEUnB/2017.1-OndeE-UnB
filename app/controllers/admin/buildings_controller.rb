@@ -6,6 +6,7 @@ class Admin::BuildingsController < AdminController
     @buildings = Building.order("acronym").page(params['page']).per(page_limit)
     @pagination_windows = 3
     @title = "Edifícios"
+    @new_url = new_admin_building_path
   end
 
   def new

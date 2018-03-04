@@ -1,4 +1,7 @@
 @media (min-width: 992px){
+    .btn-new {
+      right: 50%;
+    }
     .navbar-form {
         margin-top: 21px;
         margin-bottom: 21px;
@@ -85,7 +88,9 @@
 /*          Changes for small display      */
 
 @media (max-width: 991px){
-
+    .btn-new {
+      right: 5.3rem;
+    }
     .sidebar{
         right: 0 !important;
         left: auto;

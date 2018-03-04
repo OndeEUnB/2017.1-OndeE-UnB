@@ -7,6 +7,7 @@ class Admin::RoomsController < AdminController
     @rooms = Room.order("building_id").page(params['page']).per(page_limit)
     @pagination_windows = 3
     @title = 'Salas'
+    @new_url = new_admin_room_path
   end
 
   def new

@@ -6,6 +6,7 @@ class Admin::PointsController < AdminController
     @points = Point.order("type_point").page(params['page']).per(page_limit)
     @pagination_windows = 3
     @title = 'Pontos'
+    @new_url = new_admin_point_path
   end
 
   def new

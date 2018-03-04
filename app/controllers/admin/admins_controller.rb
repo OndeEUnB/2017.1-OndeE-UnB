@@ -6,6 +6,7 @@ class Admin::AdminsController < AdminController
     @admins = Admin.order("name").page(params['page']).per(page_limit)
     @pagination_windows = 3
     @title = "Admininstradores"
+    @new_url = new_admin_admin_path
   end
 
   def new
