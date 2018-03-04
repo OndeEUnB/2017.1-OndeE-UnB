@@ -6,3 +6,10 @@
   width: 100%;
   height: calc(100vh - 61px);
 }
+
+.no-space {
+  margin: 0;
+  > [class*="col-"] {
+    padding: 0;
+  }
+}

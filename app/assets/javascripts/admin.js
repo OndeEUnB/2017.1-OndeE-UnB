@@ -3,9 +3,6 @@
 //= require jquery/readyselector
 //= require promise
 
-// require admin/vendor
-// require admin/app
-
 //= require leaflet/draw
 //= require leaflet/map
 //= require leaflet/draw.translations
@@ -19,5 +16,3 @@
 //= require admin/points
 
 //= rails.validations
-
-$('#map').height($(document).height()-90);

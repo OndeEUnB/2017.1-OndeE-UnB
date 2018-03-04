@@ -17,16 +17,14 @@
     <%= stylesheet_link_tag 'admin' %>
   </head>
 
-  <body>
+  <body class="<%= controller_name %> <%= action_name %>">
     <div class="wrapper">
       <%= render 'layouts/admin/menu' %>
       <div class="main-panel">
         <!-- Navbar -->
         <%= render 'layouts/admin/nav' %>
         <!-- End Navbar -->
-        <div class="content">
-          <%= yield %>
-        </div>
+        <%= yield %>
       </div>
     </div>
   </body>

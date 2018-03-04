@@ -1,40 +1,42 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-12">
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
         <%= notice.html_safe unless notice.blank? %>
 
-      <div class="card">
-        <div class="card-body table-responsive p-0">
-          <table class="table table-hover table-striped m-0">
-            <thead>
-              <tr>
-                <th>Título</th>
-                <th>Sigla</th>
-                <th>Edifício</th>
-                <th>Nível</th>
-                <th>Tipo</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <% @rooms.find_each do |room| %>
+        <div class="card">
+          <div class="card-body table-responsive p-0">
+            <table class="table table-hover table-striped m-0">
+              <thead>
                 <tr>
-                  <td><%= room.title %></td>
-                  <td><%= room.acronym %></td>
-                  <td><%= room.building.acronym %></td>
-                  <td><%= room.level %></td>
-                  <td><%= room.translated_room_type %></td>
-                  <td>
-                    <%= edit_link edit_admin_room_path(room) %>
-                    <%= destroy_link admin_room_path(room), 'Você tem certeza que deseja apagar esta sala?' %>
-                  </td>
+                  <th>Título</th>
+                  <th>Sigla</th>
+                  <th>Edifício</th>
+                  <th>Nível</th>
+                  <th>Tipo</th>
+                  <th></th>
                 </tr>
-              <% end %>
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                <% @rooms.find_each do |room| %>
+                  <tr>
+                    <td><%= room.title %></td>
+                    <td><%= room.acronym %></td>
+                    <td><%= room.building.acronym %></td>
+                    <td><%= room.level %></td>
+                    <td><%= room.translated_room_type %></td>
+                    <td>
+                      <%= edit_link edit_admin_room_path(room) %>
+                      <%= destroy_link admin_room_path(room), 'Você tem certeza que deseja apagar esta sala?' %>
+                    </td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
         </div>
+        <%= paginate @rooms, window: @pagination_windows %>
       </div>
-      <%= paginate @rooms, window: @pagination_windows %>
     </div>
   </div>
 </div>
