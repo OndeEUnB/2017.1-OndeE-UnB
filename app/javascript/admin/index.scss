@@ -1,3 +1,8 @@
 @import "~bootstrap/scss/bootstrap";
 @import "./scss/index";
 @import "~pixeden-stroke-7-icon/pe-icon-7-stroke/dist/pe-icon-7-stroke";
+
+#map {
+  width: 100%;
+  height: calc(100vh - 61px);
+}
