@@ -2,11 +2,13 @@
   "dependencies": {
     "@rails/webpacker": "^3.0.2",
     "axios": "^0.17.0",
+    "bootstrap": "^4.0.0",
     "coffeescript": "1.12.7",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-on-rails": "^10.1.1",
-    "redux": "^3.7.2"
+    "jquery": "^3.3.1",
+    "pixeden-stroke-7-icon": "^1.2.3",
+    "popper.js": "^1.12.9",
+    "rails-ujs": "^5.1.5",
+    "tether": "^1.4.3"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.1",

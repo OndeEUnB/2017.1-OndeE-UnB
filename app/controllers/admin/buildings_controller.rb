@@ -2,14 +2,20 @@ class Admin::BuildingsController < AdminController
   before_action :set_building, only: [:destroy, :edit, :update]
 
   def index
-    @buildings = Building.order("acronym").page(params['page']).per(13)
+    page_limit = 13
+    @buildings = Building.order("acronym").page(params['page']).per(page_limit)
+    @pagination_windows = 3
+    @title = "Edifícios"
+    @new_url = new_admin_building_path
   end
 
   def new
     @building = Building.new
+    @title = "Cadastrar Edifício"
   end
 
   def edit
+    @title = "Alterar Edifício"
   end
 
   def update

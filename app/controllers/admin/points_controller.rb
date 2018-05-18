@@ -2,14 +2,20 @@ class Admin::PointsController < AdminController
   before_action :set_point, only: [:destroy, :edit, :update]
 
   def index
-    @points = Point.order("type_point").page(params['page']).per(13)
+    page_limit = 13
+    @points = Point.order("type_point").page(params['page']).per(page_limit)
+    @pagination_windows = 3
+    @title = 'Pontos'
+    @new_url = new_admin_point_path
   end
 
   def new
     @point = Point.new
+    @title = 'Cadastrar Ponto'
   end
 
   def edit
+    @title = 'Alterar Ponto'
   end
 
   def update

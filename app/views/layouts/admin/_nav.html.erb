@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg " color-on-scroll="500">
+  <div class=" container-fluid  ">
+    <span class="navbar-brand"><%= @title %></span>
+    <%= render 'layouts/admin/btn-new' if @new_url.present? %>
+    <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-bar burger-lines"></span>
+      <span class="navbar-toggler-bar burger-lines"></span>
+      <span class="navbar-toggler-bar burger-lines"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+      <ul class="nav navbar-nav mr-auto">
+        <li class="nav-item">
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="no-icon"><%= current_admin.name %></span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <%= link_to 'Configurações', edit_admin_registration_path, class: 'dropdown-item' %>
+            <div class="divider"></div>
+            <%= link_to 'Sair', logout_path, data: { method: :delete }, class: 'dropdown-item' %>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

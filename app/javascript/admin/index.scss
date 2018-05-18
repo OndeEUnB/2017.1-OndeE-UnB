@@ -1,0 +1,28 @@
+@import "https://fonts.googleapis.com/css?family=Montserrat:400,700,200";
+@import "https://unpkg.com/leaflet@1.0.3/dist/leaflet.css";
+@import "~bootstrap/scss/bootstrap";
+@import "./scss/index";
+@import "~pixeden-stroke-7-icon/pe-icon-7-stroke/dist/pe-icon-7-stroke";
+
+#map {
+  width: 100%;
+  height: calc(100vh - 61px);
+}
+
+.no-space {
+  margin: 0;
+  > [class*="col-"] {
+    padding: 0;
+  }
+}
+
+.btn-new {
+  float: right;
+  position: absolute;
+  top: 1.2rem;
+  font-size: 18px;
+  background-color: #1DC7EA;
+  padding: 0px 10px;
+  color: white;
+  border-radius: 3px;
+}

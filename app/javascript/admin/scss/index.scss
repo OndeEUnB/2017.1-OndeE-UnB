@@ -1,0 +1,42 @@
+
+/*!
+
+ =========================================================
+ * Light Bootstrap Dashboard - v2.0.1 (Bootstrap 4)
+ =========================================================
+
+ * Product Page: http://www.creative-tim.com/product/light-bootstrap-dashboard
+ * Copyright 2017 Creative Tim (http://www.creative-tim.com)
+ * Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard/blob/master/LICENSE.md)
+
+ =========================================================
+
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+ */
+
+@import "./components/variables";
+@import "./components/mixins";
+
+@import "./components/typography";
+
+// Core CSS
+@import "./components/misc";
+@import "./components/sidebar-and-main-panel";
+@import "./components/buttons";
+@import "./components/inputs";
+
+@import "./components/alerts";
+@import "./components/tables";
+
+@import "./components/checkbox-radio-switch";
+@import "./components/navbars";
+@import "./components/footers";
+
+// Fancy Stuff
+@import "./components/plugins/animate";
+@import "./components/dropdown";
+@import "./components/cards";
+@import "./components/chartist";
+@import "./components/responsive";
+@import "./components/bootstrap-switch";

@@ -12,7 +12,7 @@ module CampusMap
     config.load_defaults 5.1
     config.to_prepare do
       # Configure single controller layout
-      Devise::SessionsController.layout "sign"
+      Devise::SessionsController.layout "login"
       Devise::RegistrationsController.layout "admin"
     end
     # Settings in config/environments/* take precedence over those specified here.
